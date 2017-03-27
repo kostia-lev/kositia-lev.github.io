@@ -24,7 +24,13 @@ body{
 
 main{
   background-color: #383A49;
+  //there
+  background-image: url('../img/Magnify@2x.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: 50% 50%;
   width: 1440px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -35,6 +41,17 @@ nav{
   width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px;
+}
+nav input{
+  display: block;
+  margin-left: auto;
+  margin-right :auto;
+  height: 50px;
+  width: 640px;
+  border-radius: 50px;
+  font-size: 19px;
+  padding-right: 120px;
 }
 
 footer{
