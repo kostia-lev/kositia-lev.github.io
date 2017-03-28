@@ -16,5 +16,5 @@ angular
             url: '/login',
             component: 'login'
         });
-    $urlRouterProvider.otherwise('/auth/login');
+    $urlRouterProvider.otherwise('/auth/register');
 });
