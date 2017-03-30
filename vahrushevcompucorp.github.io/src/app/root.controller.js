@@ -11,6 +11,7 @@ function RootController($scope, $log, $http){
 
         $http.get('http://globalcorp.local/somejson.php', []).then(function(e){
             $log.log(e.data);
+            ctrl.fetchedData = e.data;
         });
 
     });
