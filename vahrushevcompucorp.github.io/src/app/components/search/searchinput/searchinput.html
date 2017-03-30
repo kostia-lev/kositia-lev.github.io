@@ -1,5 +1,4 @@
 <div id="search-container">
-    <!--input type="text" placeholder="Search for artist or album title" ng-value="$ctrl.searchText" -->
-    <span>{{$ctrl.st}}</span>
-    <div id="search-button" ng-click="console.log('hello')"><span>SEARCH</span></div>
+    <input type="text" placeholder="Search for artist or album title" ng-model="$ctrl.st">
+    <div id="search-button" ng-click="$ctrl.onclick();"><span>SEARCH</span></div>
 </div>

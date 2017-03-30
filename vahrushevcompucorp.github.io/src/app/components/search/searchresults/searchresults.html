@@ -1,1 +1,7 @@
-<div id="willappear"><div id="pusher">Your results will appear here</div></div>
+<div id="willappear"><!--div id="pusher">Your results will appear here</div-->
+{{$ctrl.t}}
+    <searchitem ng-repeat="item in $ctrl.fetchedarr track by $index">
+        {{item}}
+    </searchitem>
+
+</div>

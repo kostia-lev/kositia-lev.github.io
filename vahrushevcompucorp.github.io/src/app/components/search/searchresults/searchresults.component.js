@@ -1,6 +1,10 @@
 var searchresults ={
     templateUrl: './searchresults.html',
-    controller: 'SearchResultsController'
+    controller: 'SearchResultsController',
+    bindings: {
+        fetchedarr: '=',
+        t: '='
+    }
 };
 
 angular
