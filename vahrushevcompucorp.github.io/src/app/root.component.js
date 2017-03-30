@@ -1,6 +1,6 @@
 var root = {
   templateUrl: './root.html',
-  controller: 'RootController'
+  controller: 'RootController as parent'
 };
 
 angular

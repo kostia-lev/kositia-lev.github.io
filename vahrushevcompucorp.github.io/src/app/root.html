@@ -1,8 +1,9 @@
 <div class="root">
   <nav>
-    <searchinput></searchinput>
+    <input type="text" ng-model="parent.searchText" />
+    <searchinput st='parent.searchText'></searchinput>
   </nav>
   <main>
-    <searchresults></searchresults>
+    <searchresults fetchedData='$ctrl.fetchedData'></searchresults>
   </main>
 </div>

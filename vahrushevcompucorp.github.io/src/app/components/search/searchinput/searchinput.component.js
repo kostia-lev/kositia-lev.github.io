@@ -1,6 +1,10 @@
 var searchinput ={
     templateUrl: './searchinput.html',
-    controller: 'SearchInputController'
+    controller: 'SearchInputController',
+    bindings: {
+        fetchedData: '=',
+        st: '='
+    }
 };
 
 angular
