@@ -1,1 +1,6 @@
-<div class="searchitem">someitem :-)</div>
+<div class="searchitem {{$ctrl.itemtype}}" >
+    <div class="itempic" ng-transclude="image">
+    </div>
+    <div class="itemname" ng-transclude="name">
+    </div>
+</div>

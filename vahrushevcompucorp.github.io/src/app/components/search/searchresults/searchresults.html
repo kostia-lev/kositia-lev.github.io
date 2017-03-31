@@ -1,7 +1,11 @@
-<div id="willappear"><!--div id="pusher">Your results will appear here</div-->
-{{$ctrl.t}}
-    <searchitem ng-repeat="item in $ctrl.fetchedarr track by $index">
-        {{$index}}
-    </searchitem>
-
+<div id="willappear" ng-if="!$ctrl.fetchedarr.length">
+    <div id="pusher">
+        <img src="img/Magnify@2x.png"><br>
+        <span>Your results will appear here</span>
+    </div>
 </div>
+
+<searchitem itemtype="item.type" ng-repeat="item in $ctrl.fetchedarr track by $index">
+    <h5>{{item.name}}</h5>
+    <img ng-src="{{item.images[1]['url']}}" width="263" height="263">
+</searchitem>

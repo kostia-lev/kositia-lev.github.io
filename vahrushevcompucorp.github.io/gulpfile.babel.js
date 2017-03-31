@@ -26,7 +26,8 @@ const paths = {
   modules: [
     'angular/angular.js',
     'angular-ui-router/release/angular-ui-router.js',
-    'angular-loading-bar/build/loading-bar.min.js'
+    'angular-loading-bar/build/loading-bar.min.js',
+    'angular-spotify/src/angular-spotify.js'
   ],
   static: [
     `${root}/index.html`,
