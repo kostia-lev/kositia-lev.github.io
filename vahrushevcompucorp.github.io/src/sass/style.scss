@@ -94,7 +94,7 @@ nav {
   text-align: center;
   vertical-align: 20px;
 }
-searchitem{
+searchitem {
   background: white;
   display: inline-block;
   height: 328px;
@@ -103,23 +103,44 @@ searchitem{
   margin-bottom: 50px;
 
 }
-searchitem .itemname{
+searchitem>div.searchitem {
+  height: 100%;
+}
+searchitem .itemname {
   font-size: 21px;
   text-align: center;
-  padding-top: 20px;
+  display: table-cell;
+  vertical-align: middle;
 }
 searchitem .itempic img:hover {
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
-
-searchresults{
+searchitem .itempic{
+  position: relative;
+}
+searchitem .itemnamecontainer {
+  height: 65px;
+  display: table;
+  width: 100%;
+}
+.searchitemblurbg {
+  position:absolute;
+  width: 263px;
+  height: 267px;
+  background: black;
+  z-index: 0;
+}
+.searchitemblurbg:hover {
+  background: red;
+}
+searchresults {
   display: block;
   width: 1164px;
   margin-left: auto;
   margin-right: auto;
 }
-nav input{
+nav input {
   height: 50px;
   width: 640px;
   border-radius: 50px;

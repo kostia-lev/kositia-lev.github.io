@@ -1,9 +1,10 @@
 var searchitem ={
     templateUrl: './searchitem.html',
     controller: 'SearchItemController',
-    transclude: {name:'h5', image: 'img'},
+    transclude: {name:'h5'},
     bindings: {
-        itemtype: '<'
+        itemtype: '<',
+        itemimgs: '<'
     }
 };
 
