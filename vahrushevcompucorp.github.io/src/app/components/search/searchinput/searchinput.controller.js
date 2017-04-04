@@ -1,8 +1,7 @@
-
 function SearchInputController($scope, $log){
     var ctrl = this;
     $scope.$log = $log;
-    ctrl.onclick = function(e){
+    $scope.$ctrl.onclick = function(e){
         $scope.$emit('search', ctrl.st);
     }
 }

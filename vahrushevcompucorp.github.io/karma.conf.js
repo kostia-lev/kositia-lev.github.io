@@ -16,7 +16,7 @@ module.exports = function(config) {
       'node_modules/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-loading-bar/build/loading-bar.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'mocks/firebase.mock.js',
+      'node_modules/angular-spotify/src/angular-spotify.js',
       'src/app/**/*.spec.js',
       'dist/js/bundle.js',
     ],
