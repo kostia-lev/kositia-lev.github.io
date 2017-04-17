@@ -4,7 +4,8 @@ var searchitem ={
     transclude: {name:'h5'},
     bindings: {
         itemtype: '<',
-        itemimgs: '<'
+        itemimgs: '<',
+        itemid: '<'
     }
 };
 

@@ -112,10 +112,6 @@ searchitem .itemname {
   display: table-cell;
   vertical-align: middle;
 }
-searchitem .itempic img:hover {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-}
 searchitem .itempic{
   position: relative;
 }
@@ -195,4 +191,53 @@ footer{
   font-stretch: normal;
   font-weight: 500;
   text-align: center;
+}
+/* filter blur */
+.cell{
+  opacity:0.7;
+  width:420px;
+  height:420px;
+  transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+
+.A1 {
+  position: relative;
+}
+.A1:before {
+  background-size: cover;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  -webkit-filter: none; /* Google Chrome, Safari 6+ & Opera 15+ */
+  z-index: -1;
+}
+
+.txt {
+  color:#ffffff;
+  text-align:center;
+  font:18px sans serif;
+  text-decoration:none;
+  display:none;
+  position: absolute;
+  height: 110px;
+  width: 90px;
+  color: white;
+  top: 85px;
+  left: 85px;
+}
+
+.cell:hover {
+  //opacity:1.0;
+}
+
+.A1:hover:before {
+  filter: blur(15px);
+}
+.A1:hover .txt{
+  display: block;
 }

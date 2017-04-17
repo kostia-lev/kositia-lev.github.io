@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<searchitem itemtype="item.type" itemimgs="item.images" ng-repeat="item in $ctrl.fetchedarr track by $index">
+<searchitem itemtype="item.type" itemimgs="item.images" itemid="item.id" ng-repeat="item in $ctrl.fetchedarr track by $index">
     <h5>{{item.name}}</h5>
     <img ng-src="{{item.images[1]['url']}}" width="263" height="263">
 </searchitem>

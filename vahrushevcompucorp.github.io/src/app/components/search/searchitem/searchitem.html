@@ -1,7 +1,14 @@
 <div class="searchitem {{$ctrl.itemtype}}" >
-    <!--div class="searchitemblurbg"></div-->
-    <div class="itempic" style="background: url('{{$ctrl.itemimgs[1]['url']}}'); width: 263px; height: 263px">
-        <img ng-src="{{$ctrl.itemtype=='album'? '/img/album-icon@2x.png':'/img/artist-icon@2x.png'}}">
+    <style>
+        #id{{$ctrl.itemid}}:before{
+            background-image:url('{{$ctrl.itemimgs[1]['url']}}');
+        }
+    </style>
+    <div class="itempic cell A1" id="id{{$ctrl.itemid}}" style="height: 263px; width: 263px;">
+        <div class="itempicContainer txt">
+            <img ng-src="{{$ctrl.itemtype=='album'? '/img/album-icon@2x.png':'/img/artist-icon@2x.png'}}">
+            {{$ctrl.itemtype=='album'? 'View tracks':'View albums'}}
+        </div>
     </div>
     <div class="itemnamecontainer">
         <div class="itemname" ng-transclude="name">
