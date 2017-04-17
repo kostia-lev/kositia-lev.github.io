@@ -205,7 +205,7 @@ footer{
 .A1 {
   position: relative;
 }
-.A1:before {
+.alBg {
   background-size: cover;
   content: "";
   position: absolute;
@@ -235,7 +235,7 @@ footer{
   //opacity:1.0;
 }
 
-.A1:hover:before {
+.A1:hover .alBg {
   filter: blur(15px);
 }
 .A1:hover .txt{
