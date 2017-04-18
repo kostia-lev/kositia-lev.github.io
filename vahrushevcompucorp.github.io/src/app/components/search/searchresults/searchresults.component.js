@@ -3,7 +3,8 @@ var searchresults ={
     controller: 'SearchResultsController',
     bindings: {
         fetchedarr: '=',
-        t: '='
+        artiststotal: '=',
+        albumstotal: '='
     }
 };
 

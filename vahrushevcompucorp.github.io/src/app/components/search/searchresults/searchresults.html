@@ -9,3 +9,7 @@
     <h5>{{item.name}}</h5>
     <img ng-src="{{item.images[1]['url']}}" width="263" height="263">
 </searchitem>
+<div id="showmemore-button" ng-click="$ctrl.showmemore();"
+     ng-show="!!$ctrl.fetchedarr.length && ($ctrl.fetchedarr.length<($ctrl.artiststotal + $ctrl.artiststotal))">
+    <span>SHOW ME MORE</span>
+</div>

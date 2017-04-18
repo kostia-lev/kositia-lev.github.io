@@ -5,9 +5,12 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
-
+html{
+  height: 100%;
+}
 body{
-  background-color: #323440;
+  background-color: #383A49;
+  height: 100%;
 }
 #gllogo{
   height: 100px;
@@ -70,6 +73,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
 }
+
 #search-button {
   border-radius: 30px;
   width: 120px;
@@ -82,7 +86,36 @@ nav {
   padding-top: 10px;
   cursor: pointer;
 }
+
+#showmemore-button {
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background: #d05d84;
+  /*position: absolute;
+  top: 5px;
+  right: 5px;*/
+  text-align:center;
+  padding-top: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom: 50px;
+}
+
 #search-button span {
+  width: 120px;
+  height: 19px;
+  color: #ffffff;
+  font-family: Raleway;
+  font-size: 16.0px;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: 20px;
+}
+#showmemore-button span {
   width: 120px;
   height: 19px;
   color: #ffffff;
@@ -114,6 +147,8 @@ searchitem .itemname {
 }
 searchitem .itempic{
   position: relative;
+  height: 263px;
+  width: 263px;
 }
 searchitem .itemnamecontainer {
   height: 65px;
@@ -240,4 +275,97 @@ footer{
 }
 .A1:hover .txt{
   display: block;
+}
+
+/*modale container*/
+#modal-container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0
+}
+#modal-dimmed-part{
+  background: black;
+  opacity: 0.65;
+  width: 100%;
+  height: 100%;
+}
+#modal-data-container{
+  height: 797px;
+  width: 750px;
+  background: white;
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left:-377px;
+  margin-top: -399px;
+  border-radius: 4px;
+}
+#modal-data-container .firstRow{
+  height: 320px;
+  width: 750px;
+  position: relative;
+  background: brown;
+}
+#modal-data-container .secondRow{
+  height: 477px;
+  width: 750px;
+  padding: 15px;
+}
+#modalCross{
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+#albumTitle{
+  left: 12px;
+  bottom: 12px;
+  position: absolute;
+  font-size: 42px;
+  color: white;
+}
+.albumRow{
+  width: 552px;
+  height: 100px;
+  margin-top: 12px;
+}
+.albumRow:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+.albumImgContainer{
+  height: 100px;
+  width: 100px;
+  float: left;
+  background: green;
+}
+.albumDataContainer{
+  height: 100px;
+  width: 452px;
+  float: right;
+  background: cadetblue;
+}
+.albumNameContainer{
+  height: 50px;
+  font-size: 29px;
+  color: #3A3B46;
+  padding: 12px;
+}
+.albumYearContainer{
+  height: 50%;
+  font-size: 21px;
+  color: #6d6f7f;
+  padding-left: 12px;
+}
+#captionContainer{
+  padding: 0 0 12px 0;
+  color: #3A3B46;
+}
+#albumRowsContainer{
+  overflow-y: scroll;
+  height: 420px;
 }
