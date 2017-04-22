@@ -6,6 +6,7 @@ function RootController($scope, $log, $http, Spotify){
     ctrl.albumsTotal = 0;
     ctrl.artistsTotal = 0;
     ctrl.searchQuery = '';
+    ctrl.showModal = false;
 
     //this component will take search phrase and will get data from ajax
     $scope.$on('search', function(event, data){
@@ -33,6 +34,10 @@ function RootController($scope, $log, $http, Spotify){
             ctrl.fetchedData = ctrl.fetchedData.concat([...response.data.albums.items, ...response.data.artists.items]);
         });
 
+    });
+
+    $scope.$on('viewitem', function(event, data){
+        ctrl.showModal = true;
     });
 }
 

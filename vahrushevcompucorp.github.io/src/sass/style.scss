@@ -272,9 +272,11 @@ footer{
 
 .A1:hover .alBg {
   filter: blur(15px);
+  cursor: pointer;
 }
 .A1:hover .txt{
   display: block;
+  cursor: pointer;
 }
 
 /*modale container*/
@@ -362,7 +364,6 @@ footer{
   padding-left: 12px;
 }
 #captionContainer{
-  padding: 0 0 12px 0;
   color: #3A3B46;
 }
 #albumRowsContainer{

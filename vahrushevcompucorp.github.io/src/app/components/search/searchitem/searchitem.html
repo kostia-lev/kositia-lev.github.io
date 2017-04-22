@@ -1,7 +1,7 @@
 <div class="searchitem {{$ctrl.itemtype}}" >
     <div class="itempic cell A1">
         <div class="alBg" style="background-image:url('{{$ctrl.itemimgs[1]['url']}}')"></div>
-        <div class="itempicContainer txt">
+        f<div class="itempicContainer txt" ng-click="$emit('viewitem', {type: $ctrl.itemtype, id: $ctrl.itemid});">
             <img ng-src="{{$ctrl.itemtype=='album'? '/img/album-icon@2x.png':'/img/artist-icon@2x.png'}}">
             {{$ctrl.itemtype=='album'? 'View tracks':'View albums'}}
         </div>
