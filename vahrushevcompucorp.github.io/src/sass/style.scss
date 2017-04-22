@@ -311,6 +311,7 @@ footer{
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 #modal-data-container .secondRow{
   height: 477px;
@@ -349,7 +350,7 @@ footer{
 .albumDataContainer{
   height: 100px;
   width: 452px;
-  float: right;
+  float: left;
   background: cadetblue;
 }
 .albumNameContainer{
