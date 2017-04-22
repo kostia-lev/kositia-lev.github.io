@@ -38,6 +38,30 @@ function RootController($scope, $log, $http, Spotify){
 
     $scope.$on('viewitem', function(event, data){
         ctrl.showModal = true;
+
+        if(data.type == 'album'){
+            Spotify.getAlbum(data.id)
+                .then(function (response) {
+                    $log.log(response)
+                });
+
+        }else if(data.type == 'artist'){
+            var fetchedArtist = Spotify.getArtist(data.id);
+
+            var artistAlbums = Spotify.getArtistAlbums(data.id);
+
+            Promise.all([fetchedArtist, artistAlbums]).then(values=>{
+                $log.log(values);
+                $scope.$apply(function () {
+                    ctrl.modalTitle = values[0].data.name;
+                    ctrl.modalType = values[0].data.type;
+                    ctrl.modalData = values[1].data.items;
+                    ctrl.modalPicture = values[0].data.images[1];
+                    $log.log(ctrl.modalTitle);
+                });
+            });
+
+        }
     });
 }
 

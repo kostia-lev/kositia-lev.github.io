@@ -2,7 +2,11 @@ var searchpopup ={
     templateUrl: './searchpopup.html',
     controller: 'SearchPopupController',
     bindings: {
-        showmodal: '='
+        showmodal: '=',
+        modaltitle: '<',
+        modaltype: '<',
+        modaldata: '<',
+        modalpicture: '<'
     }
 };
 

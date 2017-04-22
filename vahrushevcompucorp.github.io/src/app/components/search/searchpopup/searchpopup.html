@@ -1,49 +1,26 @@
 <div id="modal-container" ng-show="$ctrl.showmodal">
     <div id="modal-dimmed-part">
     </div>
+    showmodal: '=',
+    modaltitle: '>',
+    modaltype: '>',
+    modaldata: '>',
+    modalpicture: '>'
     <figure id="modal-data-container">
-        <div class="firstRow">
+        <div class="firstRow" style="background-image: url('{{$ctrl.modalpicture.url}}')">
             <img id="modalCross" src="/img/Cross@2x.png" height="20" width="20" ng-click="$ctrl.showmodal = false"/>
-            <span id="albumTitle">Alberta Clark{{$ctrl.popupopen}}</span>
+            <span id="albumTitle">{{$ctrl.modaltitle}}</span>
         </div>
         <div class="secondRow">
             <div id="captionContainer">
                 <span>Albums</span>
             </div>
             <div id="albumRowsContainer">
-                <div class="albumRow">
-                    <div class="albumImgContainer"></div>
+                <div class="albumRow" ng-repeat="item in $ctrl.modaldata track by $index">
+                    <div class="albumImgContainer" style="background-image:url('{{item.images[2].url}}')"></div>
                     <div class="albumDataContainer">
-                        <div class="albumNameContainer">Album name</div>
-                        <div class="albumYearContainer">2017</div>
-                    </div>
-                </div>
-                <div class="albumRow">
-                    <div class="albumImgContainer"></div>
-                    <div class="albumDataContainer">
-                        <div class="albumNameContainer"><span>Album name</span></div>
-                        <div class="albumYearContainer">2017</div>
-                    </div>
-                </div>
-                <div class="albumRow">
-                    <div class="albumImgContainer"></div>
-                    <div class="albumDataContainer">
-                        <div class="albumNameContainer"><span>Album name</span></div>
-                        <div class="albumYearContainer">2017</div>
-                    </div>
-                </div>
-                <div class="albumRow">
-                    <div class="albumImgContainer"></div>
-                    <div class="albumDataContainer">
-                        <div class="albumNameContainer"><span>Album name</span></div>
-                        <div class="albumYearContainer">2017</div>
-                    </div>
-                </div>
-                <div class="albumRow">
-                    <div class="albumImgContainer"></div>
-                    <div class="albumDataContainer">
-                        <div class="albumNameContainer"><span>Album name</span></div>
-                        <div class="albumYearContainer">2017</div>
+                        <div class="albumNameContainer">{{item.name}}</div>
+                        <div class="albumYearContainer">-</div>
                     </div>
                 </div>
             </div>
