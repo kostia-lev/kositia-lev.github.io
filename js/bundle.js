@@ -86,13 +86,10 @@ function RootController($scope, $log, $http, Spotify){
             Spotify.getAlbum(data.id)
                 .then(function (response) {
 
-                    //$scope.$apply(function () {
                         ctrl.modalTitle = response.data.name;
                         ctrl.modalType = 'album';
                         ctrl.modalData = response.data.tracks.items;
                         ctrl.modalPicture = response.data.images[0];
-                        $log.log(ctrl.modalTitle);
-                    //});
                 });
 
         }else if(data.type == 'artist'){
@@ -101,13 +98,11 @@ function RootController($scope, $log, $http, Spotify){
             var artistAlbums = Spotify.getArtistAlbums(data.id);
 
             Promise.all([fetchedArtist, artistAlbums]).then(values=>{
-                $log.log(values);
                 $scope.$apply(function () {
                     ctrl.modalTitle = values[0].data.name;
                     ctrl.modalType = 'artist';
                     ctrl.modalData = values[1].data.items;
                     ctrl.modalPicture = values[0].data.images[0];
-                    $log.log(ctrl.modalTitle);
                 });
             });
 
@@ -230,10 +225,7 @@ angular
 function SearchResultsController($scope, $log){
     var ctrl = this;
     $scope.$log = $log;
-    $log.log(this.artistsTotal);
-    $log.log(this.albumsTotal);
     ctrl.showmemore = function(){
-        $log.log('show me more');
         $scope.$emit('showmemore');
     }
 }
