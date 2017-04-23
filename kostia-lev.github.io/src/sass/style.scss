@@ -10,7 +10,16 @@ html{
 }
 body{
   background-color: #383A49;
+  font-family: 'Raileway', Fallback, sans-serif;
   height: 100%;
+}
+@font-face {
+  font-family: 'MaterialIcons-Regular';
+  src: url('../fonts/MaterialIcons-Regular.eot');
+  src: url('../fonts/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
+  url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+  url('../fonts/MaterialIcons-Regular.ttf')  format('truetype');
 }
 #gllogo{
   height: 100px;
@@ -37,6 +46,7 @@ main{
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   border: 1px solid transparent;
   position: relative;
 }
@@ -378,6 +388,12 @@ footer{
   margin-left: -15px;
 }
 .trackson{
+  display: none;
+}
+#modalCross{
+  display: inline;
+}
+#modalCrossBlack{
   display: none;
 }
 
