@@ -3,8 +3,11 @@
     </div>
     <figure id="modal-data-container">
         <div class="firstRow" style="background-image: url('{{$ctrl.modalpicture.url}}')">
-            <img id="modalCross" src="/img/Cross@2x.png" height="20" width="20" ng-click="$ctrl.showmodal = false"/>
-            <span id="albumTitle">{{$ctrl.modaltitle}}</span>
+
+            <img id="modalCross" class="modalCross" src="/img/Cross@2x.png" height="20" width="20" ng-click="$ctrl.showmodal = false"/>
+            <img id="modalCrossBlack" class="modalCross" src="/img/Cross Dark@2x.png" height="20" width="20" ng-click="$ctrl.showmodal = false"/>
+
+            <span id="albumTitle"><span class="trackson">{{$ctrl.modaltype == 'artist'? 'Albums by':'Tracks on'}}</span><br>{{$ctrl.modaltitle}}</span>
         </div>
         <div class="secondRow">
             <div id="captionContainer">
